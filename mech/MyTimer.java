@@ -27,6 +27,7 @@ public class MyTimer extends javax.swing.Timer implements Constants, ActionListe
 	public BufferedImage buffImg;
 	public int stepNumber;
 	public boolean stopped;
+	private SavePNG savePNG = new SavePNG();
 	/**
 	 * 0 - white <br> 1 - black
 	 */
@@ -128,8 +129,8 @@ public class MyTimer extends javax.swing.Timer implements Constants, ActionListe
 	private void increaseStepNumber() {
 		stepNumber++;
 		scr.setTextOnStepNumberLabel(Integer.toString(stepNumber));
-		if ((int) stepNumber%10000 == 0){
-			SavePNG savePNG = new SavePNG();
+		if (scr.randomChBox.isSelected()
+			&& (int) stepNumber%SNAPSHOT_FREQUENCY == 0){
 			savePNG.save(buffImg, directionChars, stepNumber);
 		}
 	}

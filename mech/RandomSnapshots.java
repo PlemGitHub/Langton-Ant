@@ -22,7 +22,7 @@ public class RandomSnapshots extends Thread implements Constants{
 	@Override
 	public void run() {
 		do {
-			while (myTimer.stepNumber < 250100){
+			while (myTimer.stepNumber < STEP_LIMIT){
 				if (myTimer.stopped)
 					interrupt();
 				Thread.yield();

@@ -34,4 +34,7 @@ public interface Constants {
 	Color[] COLORS = {Color.WHITE, Color.BLACK, Color.BLUE, Color.CYAN, Color.DARK_GRAY, Color.GRAY, Color.GREEN, Color.LIGHT_GRAY, Color.MAGENTA,
 						Color.ORANGE, Color.PINK, Color.RED, Color.YELLOW};
 	int COLORS_LAST_INDEX = COLORS.length-1;
+	
+	int STEP_LIMIT = 250100;
+	int SNAPSHOT_FREQUENCY = 10000;
 }
